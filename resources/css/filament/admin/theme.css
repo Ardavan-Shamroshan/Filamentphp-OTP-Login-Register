@@ -1,0 +1,60 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+@import '../../font.css';
+
+@config 'tailwind.config.js';
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+body {
+    font-family: Inter, IRANSansX, serif;
+}
+
+.fi-btn {
+    padding: .375rem .25rem;
+}
+
+.fi-btn-label {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+}
+
+.fi-modal-close-overlay {
+    @apply backdrop-blur-sm;
+}
+
+.fi-dropdown-panel {
+    max-height: 19rem;
+    @apply overflow-auto no-scrollbar;
+}
+
+/*.fi-tabs {*/
+/*    @apply justify-between;*/
+/*}*/
+
+input.fi-otp-input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    overflow: visible;
+}
+
+input.fi-otp-input[type=number]::-webkit-inner-spin-button,
+input.fi-otp-input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0
+}
